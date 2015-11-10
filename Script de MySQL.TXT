@@ -1,0 +1,50 @@
+create database DSW;
+
+
+
+create table Usuario(
+	id_u int(4) NOT NULL  AUTO_INCREMENT NOT NULL PRIMARY KEY,
+	nombre_u varchar(64) NOT NULL,
+	pass_u varchar(64) NOT NULL,
+	mail varchar(64) NOT NULL,
+	ciudad varchar(64) NOT NULL,
+	lengua_n int(4) NOT NULL,
+	lengua_a int(4) NOT NULL,
+	FOREIGN KEY(lengua_n) REFERENCES Lengua(id_l) ,
+	FOREIGN KEY(lengua_a) REFERENCES Lengua(id_l) 	
+	);
+
+create table Lengua(
+	id_l int(4) NOT NULL  AUTO_INCREMENT NOT NULL PRIMARY KEY,
+	nombre_l varchar(64) NOT NULL
+	);
+
+create table Amigos(
+	amigo1 int(4) NOT NULL,
+	amigo2 int(4) NOT NULL,
+	FOREIGN KEY(amigo1) REFERENCES Usuario(id_u) ,
+	FOREIGN KEY(amigo2) REFERENCES Usuario(id_u),
+	PRIMARY KEY(amigo1, amigo2)
+	);
+
+
+
+
+create table Mensaje(
+	id_msj int(4) AUTO_INCREMENT NOT NULL PRIMARY KEY,
+	mensaje varchar(128) NOT NULL,
+	amigo1 int(4) NOT NULL,
+	amigo2 int(4) NOT NULL,
+	FOREIGN KEY(amigo1) REFERENCES Amigos(amigo1) ,
+	FOREIGN KEY(amigo2) REFERENCES Amigos(amigo2)
+
+	);
+	
+
+
+insert into Lengua(nombre_l) values ("Ingles");
+insert into Lengua(nombre_l) values ("Español");
+insert into Lengua(nombre_l) values ("Frances");
+insert into Lengua(nombre_l) values ("Aleman");
+insert into Lengua(nombre_l) values ("Italiano");
+insert into Lengua(nombre_l) values ("Chino");
