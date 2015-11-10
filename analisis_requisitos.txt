@@ -1,0 +1,13 @@
+Análisis de requisitos
+
+Requisitos funcionales
+-Registro e inicio de sesión
+-Consulta de bases de datos
+-La aplicacion cuente con un chat que permita la comunicacion entre usuarios
+-Almacenamiento y recuperacion de informacion de un usuario.
+
+
+Requisitos no funcionales
+-Uso de estandares web como HTML Y CSS
+-Uso de MySQL como gestor de base de datos
+-Colores vecinos al azul para la interfaz
