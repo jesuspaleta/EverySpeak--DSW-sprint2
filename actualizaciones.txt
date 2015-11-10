@@ -1,0 +1,8 @@
+Actualizaciones
+
+- Mejoras en el chat
+- Cambio de colores en la interfaz
+- Se solucionaron varios bugs en la búsqueda de usuarios.
+- Se modifico la tabla 'Mensaje' en la base datos eliminando el atributo 'no_conv' y llevando la unicidad
+   con la llave primaria 'id_mensaje' unicamente. 
+  
