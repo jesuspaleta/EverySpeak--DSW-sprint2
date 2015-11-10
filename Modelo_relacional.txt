@@ -1,0 +1,21 @@
+Modelo relacional
+Base de datos EverySpeak
+
+Lengua(id_l, nombre_l)
+        pk
+
+Usuario(id_u, nombre_u, pass_u, mail, ciudad, lengua_n, lengua_a);
+         pk                                      fk        fk
+         
+  Lengua_n referencia a Lengua;
+  Lengua_a referencia a Lengua;
+  
+Amigos(amigo1, amigo2)
+        fk-> pk <-fk
+          
+  Amigo1, amigo2 referencia a Usuario;
+  
+Mensaje(id_msj, mensaje, no_conv, amigo1, amigo2)
+          pk                        fk      fk
+
+  Lengua_n referencia a Lengua;
